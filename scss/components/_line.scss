@@ -1,0 +1,41 @@
+@mixin pseudo($loc: before,
+              $content: '', 
+              $pos: absolute, 
+              $top: 0%, 
+              $left: 0%,
+              $width: 36px,
+              $height: 3px
+        ) {
+    position: relative;
+    cursor: pointer;
+    list-style-type: none;
+    inline-size: $width;
+    block-size: $height;
+    margin-inline: 5px;
+    background-color: hsla(0, 0%, 80%, 1);
+
+    &.active {
+        position: relative;
+        overflow: hidden;
+
+        &::#{$loc} {
+            content: $content;
+            position: $pos;
+            inset-block-start: $top;
+            inset-inline-start: $left;
+            inline-size: $width;
+            block-size: $height;
+            background-color: hsla(0, 0%, 20%, 1);
+            animation: lineAnimate 5s linear;
+        }
+    }
+}
+
+@keyframes lineAnimate {
+    from{
+        inset-inline-start: -100%;
+    }
+    to{
+        inset-inline-start: 0;
+    }
+}

@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-block-size: 100vh;
+}
+
+.container {
+  inline-size: clamp(300px, 100%, 500px);
+  margin-inline: auto;
+  position: relative;
+}
+
+.container .image-carousel {
+  position: relative;
+  inline-size: 100%;
+  block-size: 30vh;
+  min-block-size: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.container .image-carousel img {
+  position: absolute;
+  inset-block-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: opacity .5s ease-in;
+  transition: opacity .5s ease-in;
+}
+
+.container .prev-btn,
+.container .next-btn {
+  inline-size: 40px;
+  block-size: 40px;
+  position: absolute;
+  inset-block-start: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  outline: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.container .prev-btn:hover::before,
+.container .next-btn:hover::before {
+  border-color: #333333;
+}
+
+.container .prev-btn::before,
+.container .next-btn::before {
+  content: '';
+  cursor: pointer;
+  inline-size: 20px;
+  block-size: 20px;
+  position: absolute;
+  inset-block-start: 25%;
+  -webkit-border-start: 2px solid #cccccc;
+          border-inline-start: 2px solid #cccccc;
+  -webkit-border-before: 2px solid #cccccc;
+          border-block-start: 2px solid #cccccc;
+  -webkit-transition: border-color .3s ease-in-out;
+  transition: border-color .3s ease-in-out;
+}
+
+.container .prev-btn {
+  inset-inline-start: 0;
+}
+
+.container .prev-btn::before {
+  inset-inline-start: 30%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.container .next-btn {
+  inset-inline-end: 0;
+}
+
+.container .next-btn::before {
+  inset-inline-end: 30%;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.container .linenav {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-end: 0;
+  inline-size: 100%;
+  padding-inline: 16px;
+  padding-block: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=main.css.map */
