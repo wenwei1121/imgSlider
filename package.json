@@ -1,7 +1,6 @@
 {
   "name": "img-slider",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,11 +11,23 @@
   "license": "ISC",
   "devDependencies": {
     "eslint": "^7.32.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.8",
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^8.0.0",
     "stylelint-order": "^4.1.0"
   },
   "dependencies": {
     "stylelint-scss": "^3.20.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenwei1121/imgSlider.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wenwei1121/imgSlider/issues"
+  },
+  "homepage": "https://github.com/wenwei1121/imgSlider#readme",
+  "description": ""
 }

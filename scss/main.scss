@@ -1,4 +1,4 @@
-// @import 'components';
+// @use 'abstracts' as a;
 
 *,
 *::before,
@@ -93,7 +93,7 @@ body {
         align-items: center;
 
         .line {
-            // @include pseudo();
+            // @include a.pseudo;
         }
     }
 }
